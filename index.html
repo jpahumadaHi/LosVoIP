@@ -5,100 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PhishGuard - Ciberseguridad</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #f5f7fb; color: #333; }
+    body { font-family: 'Poppins', sans-serif; background: #f5f7fb; color: #333; scroll-behavior: smooth; }
 
-    header {
-      background: linear-gradient(135deg, #0a2540, #1c4b82);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
+    header { background: linear-gradient(135deg, #0a2540, #1c4b82); color: white; padding: 80px 20px; text-align: center; }
+    header h1 { font-size: 2.8rem; }
 
-    header h1 { font-size: 2.8rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; opacity: 0.9; }
-
-    nav {
-      background: white;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #0a2540;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
+    nav { background: white; display: flex; justify-content: center; gap: 25px; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    nav a { text-decoration: none; color: #0a2540; font-weight: 600; }
     nav a:hover { color: #007bff; }
 
     section { padding: 60px 20px; }
+    .container { max-width: 1100px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 40px; color: #0a2540; }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 25px; }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
+    .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+    .card:hover { transform: translateY(-8px); }
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      transition: 0.3s;
-    }
+    .icon { font-size: 35px; margin-bottom: 15px; color: #007bff; }
 
-    .card:hover { transform: translateY(-5px); }
+    .hero-btn { margin-top: 20px; display: inline-block; padding: 12px 25px; background: #00c2ff; color: white; border-radius: 30px; text-decoration: none; }
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
+    .pricing { text-align: center; }
+    .price-box { background: #0a2540; color: white; padding: 30px; border-radius: 15px; }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #0a2540;
-      font-size: 2rem;
-    }
+    footer { background: #0a2540; color: white; text-align: center; padding: 30px; }
 
-    .hero-btn {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 25px;
-      background: #00c2ff;
+    /* WhatsApp Button */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
       color: white;
-      border-radius: 30px;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
       text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .hero-btn:hover { background: #009ed6; }
-
-    .contact {
-      text-align: center;
-    }
-
-    footer {
-      background: #0a2540;
-      color: white;
-      text-align: center;
-      padding: 30px;
     }
   </style>
 </head>
@@ -111,35 +59,32 @@
 </header>
 
 <nav>
+  <a href="#valor">Valor</a>
   <a href="#servicios">Servicios</a>
-  <a href="#diferencia">Diferencial</a>
+  <a href="#diferencia">Diferencia</a>
   <a href="#nosotros">Nosotros</a>
+  <a href="#mision">Misión</a>
+  <a href="#vision">Visión</a>
+  <a href="#precios">Precios</a>
   <a href="#contacto">Contacto</a>
 </nav>
+
+<section id="valor">
+  <div class="container">
+    <h2>Propuesta de Valor</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      Convertimos a tus empleados en tu mejor defensa digital mediante simulaciones reales y capacitación continua.
+    </p>
+  </div>
+</section>
 
 <section id="servicios">
   <div class="container">
     <h2>Servicios</h2>
     <div class="grid">
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1616530834117-9167fb0d8ebc?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-        <h3>Simulación de Phishing</h3>
-        <p>Correos falsos controlados que imitan ataques reales para medir la vulnerabilidad de tu equipo.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://unsplash.com/photos/person-in-blue-denim-jeans-wKu5yvAT0bg" />
-        <h3>Capacitación</h3>
-        <p>Cursos prácticos y dinámicos para fortalecer la cultura de ciberseguridad en tu empresa.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" />
-        <h3>Informes</h3>
-        <p>Reportes detallados con estadísticas claras sobre riesgos y comportamiento del equipo.</p>
-      </div>
-
+      <div class="card"><i class="fa-solid fa-envelope icon"></i><h3>Phishing</h3><p>Simulación de ataques reales.</p></div>
+      <div class="card"><i class="fa-solid fa-user-graduate icon"></i><h3>Capacitación</h3><p>Entrenamiento práctico.</p></div>
+      <div class="card"><i class="fa-solid fa-chart-line icon"></i><h3>Informes</h3><p>Datos claros de vulnerabilidad.</p></div>
     </div>
   </div>
 </section>
@@ -148,22 +93,9 @@
   <div class="container">
     <h2>¿Qué nos diferencia?</h2>
     <div class="grid">
-
-      <div class="card">
-        <h3>Simulaciones reales</h3>
-        <p>Adaptadas al sector y situación de cada empresa.</p>
-      </div>
-
-      <div class="card">
-        <h3>Datos claros</h3>
-        <p>Medición precisa del nivel de riesgo humano.</p>
-      </div>
-
-      <div class="card">
-        <h3>Accesible</h3>
-        <p>Planes desde $400.000 COP ideales para PYMEs.</p>
-      </div>
-
+      <div class="card"><i class="fa-solid fa-bullseye icon"></i><p>Simulación personalizada</p></div>
+      <div class="card"><i class="fa-solid fa-database icon"></i><p>Datos reales</p></div>
+      <div class="card"><i class="fa-solid fa-coins icon"></i><p>Precios accesibles</p></div>
     </div>
   </div>
 </section>
@@ -171,25 +103,49 @@
 <section id="nosotros">
   <div class="container">
     <h2>¿Quiénes somos?</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      PhishGuard es un emprendimiento de ciberseguridad enfocado en prevenir ataques de phishing mediante simulación y educación.
-      Creemos que la mejor defensa digital empieza por las personas.
-    </p>
+    <p style="text-align:center; max-width:800px; margin:auto;">Somos un emprendimiento enfocado en proteger empresas a través de la educación y simulación.</p>
+  </div>
+</section>
+
+<section id="mision">
+  <div class="container">
+    <h2>Misión</h2>
+    <p style="text-align:center;">Fortalecer la seguridad digital mediante capacitación y simulación.</p>
+  </div>
+</section>
+
+<section id="vision">
+  <div class="container">
+    <h2>Visión</h2>
+    <p style="text-align:center;">Ser líderes en ciberseguridad preventiva en Colombia.</p>
+  </div>
+</section>
+
+<section id="precios">
+  <div class="container pricing">
+    <h2>Planes</h2>
+    <div class="price-box">
+      <h3>Plan PYME</h3>
+      <p style="font-size:30px;">$400.000 COP / mes</p>
+      <p>Incluye simulación + capacitación + reportes</p>
+    </div>
   </div>
 </section>
 
 <section id="contacto">
-  <div class="container contact">
+  <div class="container" style="text-align:center;">
     <h2>Contacto</h2>
-    <p><strong>📱 WhatsApp:</strong> 304 342 4886</p>
-    <p><strong>✉️ Email:</strong> phishguard.losvoip@gmail.com</p>
-    <p><strong>📍 Dirección:</strong> Barranquilla, Colombia</p>
+    <p>📱 304 342 4886</p>
+    <p>✉️ phishguard.losvoip@gmail.com</p>
+    <p>📍 Barranquilla, Colombia</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 PhishGuard - Todos los derechos reservados</p>
+  <p>© 2026 PhishGuard</p>
 </footer>
+
+<a href="https://wa.me/573043424886" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 
 </body>
 </html>
