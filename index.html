@@ -4,38 +4,120 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PhishGuard - Ciberseguridad</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #f5f7fb; color: #333; scroll-behavior: smooth; }
 
-    header { background: linear-gradient(135deg, #0a2540, #1c4b82); color: white; padding: 80px 20px; text-align: center; }
-    header h1 { font-size: 2.8rem; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fb;
+      color: #333;
+      scroll-behavior: smooth;
+      line-height: 1.7;
+    }
 
-    nav { background: white; display: flex; justify-content: center; gap: 25px; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-    nav a { text-decoration: none; color: #0a2540; font-weight: 600; }
+    header {
+      background: linear-gradient(135deg, #0a2540, #1c4b82);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+    header p { opacity: 0.9; }
+
+    nav {
+      background: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0a2540;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
     nav a:hover { color: #007bff; }
 
-    section { padding: 60px 20px; }
+    section { padding: 70px 20px; }
+
     .container { max-width: 1100px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 40px; color: #0a2540; }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 25px; }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0a2540;
+      font-size: 2rem;
+    }
 
-    .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+    .text-center { text-align: center; max-width: 850px; margin: auto; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: 0.3s;
+    }
+
     .card:hover { transform: translateY(-8px); }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
 
     .icon { font-size: 35px; margin-bottom: 15px; color: #007bff; }
 
-    .hero-btn { margin-top: 20px; display: inline-block; padding: 12px 25px; background: #00c2ff; color: white; border-radius: 30px; text-decoration: none; }
+    .hero-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 12px 25px;
+      background: #00c2ff;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-    .pricing { text-align: center; }
-    .price-box { background: #0a2540; color: white; padding: 30px; border-radius: 15px; }
+    .price-box {
+      background: #0a2540;
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 400px;
+      margin: auto;
+    }
 
-    footer { background: #0a2540; color: white; text-align: center; padding: 30px; }
+    footer {
+      background: #0a2540;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
 
-    /* WhatsApp Button */
     .whatsapp {
       position: fixed;
       bottom: 20px;
@@ -45,23 +127,7 @@
       padding: 15px;
       border-radius: 50%;
       font-size: 25px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
       text-decoration: none;
-    }
-     .card {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      transition: 0.3s;
-    }
-
-    .card:hover { transform: translateY(-5px); }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -87,20 +153,13 @@
 <section id="valor">
   <div class="container">
     <h2>Propuesta de Valor</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      Ofrecemos un servicio profesional de simulación de ataques de phishing
-controlados, combinado con un programa de capacitación continua, para que tus
-empleados sean tu primera línea de defensa digital.
-Diseñamos correos falsos personalizados que imitan situaciones reales: alertas
-bancarias, correos del "jefe", descuentos y premios. Los enviamos sin aviso previo para
-medir el nivel real de vulnerabilidad de tu equipo.
-Generamos un informe detallado de vulnerabilidad con estadísticas claras: quién
-cayó, en qué engaño y cuál es tu nivel de riesgo real.
-Luego capacitamos a tu personal y repetimos el ciclo periódicamente para medir el
-progreso en cultura de ciberseguridad.
-El 90% de los ciberataques comienzan con un error humano.
-
-    </p>
+    <div class="text-center">
+      <p>Ofrecemos un servicio profesional de simulación de ataques de phishing controlados, combinado con un programa de capacitación continua, para que tus empleados sean tu primera línea de defensa digital.</p>
+      <p>Diseñamos correos falsos personalizados que imitan situaciones reales como alertas bancarias, correos del "jefe", descuentos y premios. Estos se envían sin previo aviso para medir el comportamiento real del equipo.</p>
+      <p>Posteriormente, generamos un informe detallado con estadísticas claras que permiten identificar quién cayó, en qué tipo de engaño y cuál es el nivel de riesgo de la organización.</p>
+      <p>Luego capacitamos a tu personal y repetimos el ciclo periódicamente para evaluar el progreso y fortalecer la cultura de ciberseguridad.</p>
+      <h3>El 90% de los ciberataques comienzan con un error humano.</h3>
+    </div>
   </div>
 </section>
 
@@ -110,37 +169,35 @@ El 90% de los ciberataques comienzan con un error humano.
     <div class="grid">
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b" />
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop" />
         <h3>Simulación de Phishing</h3>
-        <p>Correos falsos controlados que imitan ataques reales para medir la vulnerabilidad de tu equipo.</p>
+        <p>Realizamos campañas de phishing controlado para evaluar el comportamiento de los empleados frente a amenazas reales.</p>
       </div>
 
       <div class="card">
         <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop" />
         <h3>Capacitación</h3>
-        <p>Cursos prácticos y dinámicos para fortalecer la cultura de ciberseguridad en tu empresa.</p>
+        <p>Ofrecemos formación práctica, dinámica y continua para mejorar la conciencia en seguridad digital.</p>
       </div>
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" />
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" />
         <h3>Informes</h3>
-        <p>Reportes detallados con estadísticas claras sobre riesgos y comportamiento del equipo.</p>
+        <p>Entregamos reportes claros con métricas clave que permiten tomar decisiones estratégicas.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-
 <section id="diferencia">
   <div class="container">
     <h2>¿Qué nos diferencia?</h2>
 
-    <div><p style="text-align:center; max-width:800px; margin:auto;">En PhishGuard nos diferenciamos por brindar un enfoque práctico, accesible y enfocado en las personas, reconociendo que el factor humano es la principal via para los ciberdelincuentes.
+    <p class="text-center">En PhishGuard nos destacamos por ofrecer un enfoque práctico, accesible y centrado en el factor humano, que es la principal causa de los ciberataques exitosos.</p>
 
-    </style=></div>
     <div class="grid">
-
+      
       <div class="card"><i class="fa-solid fa-bullseye icon"></i><p>Simulaciones reales y personalizadas según el sector y perfil de cada empresa.</p></div>
       <div class="card"><i class="fa-solid fa-database icon"></i><p>Informes detallados con datos concretos sobre el nivel de vulnerabilidad.</p></div>
       <div class="card"><i class="fa-solid fa-user-graduate icon"></i><p>Capacitación continua con cursos prácticos y medibles.</p></div>
@@ -152,8 +209,8 @@ El 90% de los ciberataques comienzan con un error humano.
 <section id="nosotros">
   <div class="container">
     <h2>¿Quiénes somos?</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      PhishGuard – Los Voip es un emprendimiento de ciberseguridad especializado en la prevención de ataques de phishing y la capacitación del talento humano empresarial. Nace de la formación académica en ciberseguridad de nuestro equipo, con la convicción de que la mejor defensa digital empieza por las personas, no solo por la tecnología.
+    <p class="text-center">
+      PhishGuard – Los Voip es un emprendimiento de ciberseguridad especializado en la prevención de ataques de phishing y la capacitación del talento humano empresarial. Nace desde la formación en ciberseguridad de sus creadores, con la convicción de que la mejor defensa digital no está solo en la tecnología, sino en las personas.
     </p>
   </div>
 </section>
@@ -161,8 +218,8 @@ El 90% de los ciberataques comienzan con un error humano.
 <section id="mision">
   <div class="container">
     <h2>Misión</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      Fortalecer la seguridad digital de las organizaciones mediante simulaciones de phishing controladas y programas de capacitación continua, enfocándonos en el factor humano como principal vector de riesgo. Ofrecemos soluciones prácticas, accesibles y medibles para PYMEs que desean proteger su información, su reputación y la confianza de sus clientes.
+    <p class="text-center">
+     Fortalecer la seguridad digital de las organizaciones mediante simulaciones de phishing controladas y programas de capacitación continua, enfocándonos en el factor humano como principal vector de riesgo. Ofrecemos soluciones prácticas, accesibles y medibles para PYMEs que desean proteger su información, su reputación y la confianza de sus clientes.
     </p>
   </div>
 </section>
@@ -170,14 +227,14 @@ El 90% de los ciberataques comienzan con un error humano.
 <section id="vision">
   <div class="container">
     <h2>Visión</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      Convertirnos en el referente de ciberseguridad preventiva para pequeñas y medianas empresas en Colombia, reconocidos por transformar la cultura digital de las organizaciones a través de la educación, la innovación y el compromiso con la seguridad humana.
+    <p class="text-center">
+       Convertirnos en el referente de ciberseguridad preventiva para pequeñas y medianas empresas en Colombia, reconocidos por transformar la cultura digital de las organizaciones a través de la educación, la innovación y el compromiso con la seguridad humana.
     </p>
   </div>
 </section>
 
 <section id="precios">
-  <div class="container pricing">
+  <div class="container">
     <h2>Planes</h2>
     <div class="price-box">
       <h3>Plan PYME</h3>
@@ -188,7 +245,7 @@ El 90% de los ciberataques comienzan con un error humano.
 </section>
 
 <section id="contacto">
-  <div class="container" style="text-align:center;">
+  <div class="container text-center">
     <h2>Contacto</h2>
     <p>📱 304 342 4886</p>
     <p>✉️ phishguard.losvoip@gmail.com</p>
@@ -200,7 +257,4 @@ El 90% de los ciberataques comienzan con un error humano.
   <p>© 2026 PhishGuard</p>
 </footer>
 
-<a href="https://wa.me/573043424886" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-
-</body>
-</html>
+<a href="https://wa.me/573043424886" class="whatsapp"><i class="fa-brands fa-w
