@@ -1,19 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PhishGuard - Ciberseguridad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
-    header { background: #0a2540; color: white; padding: 20px; text-align: center; }
-    nav { background: #133b5c; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 40px; }
-    .container { max-width: 1000px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
-    h2 { color: #0a2540; }
-    footer { background: #0a2540; color: white; text-align: center; padding: 20px; }
-    .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; border-radius: 5px; text-decoration: none; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #f5f7fb; color: #333; }
+
+    header {
+      background: linear-gradient(135deg, #0a2540, #1c4b82);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
+
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0a2540;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: #007bff; }
+
+    section { padding: 60px 20px; }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0a2540;
+      font-size: 2rem;
+    }
+
+    .hero-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 12px 25px;
+      background: #00c2ff;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .hero-btn:hover { background: #009ed6; }
+
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      background: #0a2540;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
   </style>
 </head>
 <body>
@@ -21,61 +107,83 @@
 <header>
   <h1>PhishGuard - Los Voip</h1>
   <p>Protegemos el eslabón más vulnerable: las personas</p>
+  <a href="#contacto" class="hero-btn">Solicitar diagnóstico gratis</a>
 </header>
 
 <nav>
   <a href="#servicios">Servicios</a>
-  <a href="#diferencia">Diferenciador</a>
+  <a href="#diferencia">Diferencial</a>
   <a href="#nosotros">Nosotros</a>
   <a href="#contacto">Contacto</a>
 </nav>
 
-<section>
-  <div class="container">
-    <h2>Propuesta de Valor</h2>
-    <p>Ofrecemos simulaciones de phishing controladas junto con capacitación continua para fortalecer la seguridad digital de tu empresa. Evaluamos la vulnerabilidad real de tus empleados mediante correos simulados y proporcionamos informes detallados.</p>
-  </div>
-</section>
-
 <section id="servicios">
   <div class="container">
     <h2>Servicios</h2>
-    <ul>
-      <li>Simulaciones de phishing personalizadas</li>
-      <li>Capacitación online práctica</li>
-      <li>Informes de vulnerabilidad</li>
-      <li>Certificación de seguridad empresarial</li>
-    </ul>
+    <div class="grid">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b" />
+        <h3>Simulación de Phishing</h3>
+        <p>Correos falsos controlados que imitan ataques reales para medir la vulnerabilidad de tu equipo.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581093588401-12f1b61f63f4" />
+        <h3>Capacitación</h3>
+        <p>Cursos prácticos y dinámicos para fortalecer la cultura de ciberseguridad en tu empresa.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" />
+        <h3>Informes</h3>
+        <p>Reportes detallados con estadísticas claras sobre riesgos y comportamiento del equipo.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <section id="diferencia">
   <div class="container">
     <h2>¿Qué nos diferencia?</h2>
-    <p>Nos enfocamos en el factor humano con simulaciones reales, informes claros y capacitación continua. Ofrecemos precios accesibles para PYMEs desde $400.000 COP mensuales.</p>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Simulaciones reales</h3>
+        <p>Adaptadas al sector y situación de cada empresa.</p>
+      </div>
+
+      <div class="card">
+        <h3>Datos claros</h3>
+        <p>Medición precisa del nivel de riesgo humano.</p>
+      </div>
+
+      <div class="card">
+        <h3>Accesible</h3>
+        <p>Planes desde $400.000 COP ideales para PYMEs.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <section id="nosotros">
   <div class="container">
     <h2>¿Quiénes somos?</h2>
-    <p>PhishGuard es un emprendimiento de ciberseguridad enfocado en prevenir ataques de phishing mediante educación y simulación. Creemos que la mejor defensa empieza por las personas.</p>
-
-    <h3>Misión</h3>
-    <p>Fortalecer la seguridad digital mediante simulaciones y capacitación continua.</p>
-
-    <h3>Visión</h3>
-    <p>Ser referentes en ciberseguridad preventiva para PYMEs en Colombia.</p>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      PhishGuard es un emprendimiento de ciberseguridad enfocado en prevenir ataques de phishing mediante simulación y educación.
+      Creemos que la mejor defensa digital empieza por las personas.
+    </p>
   </div>
 </section>
 
 <section id="contacto">
-  <div class="container">
+  <div class="container contact">
     <h2>Contacto</h2>
-    <p><strong>Teléfono:</strong> 304 342 4886</p>
-    <p><strong>Correo:</strong> phishguard.losvoip@gmail.com</p>
-    <p><strong>Dirección:</strong> Carrera 6m #102-141</p>
-    <a class="btn" href="#">Solicitar diagnóstico gratuito</a>
+    <p><strong>📱 WhatsApp:</strong> 304 342 4886</p>
+    <p><strong>✉️ Email:</strong> phishguard.losvoip@gmail.com</p>
+    <p><strong>📍 Dirección:</strong> Barranquilla, Colombia</p>
   </div>
 </section>
 
